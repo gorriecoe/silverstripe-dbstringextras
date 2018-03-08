@@ -1,0 +1,6 @@
+---
+Name: dbstringextras
+---
+SilverStripe\ORM\FieldType\DBString:
+  extensions:
+    - gorriecoe\DBStringExtras\DBStringExtras
