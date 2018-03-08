@@ -9,7 +9,7 @@ composer require gorriecoe/silverstripe-dbstringextras
 
 ## Requirements
 
-- silverstripe/cms ^4.0
+- silverstripe/framework ^4.0
 
 ## Maintainers
 
