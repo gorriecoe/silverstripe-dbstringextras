@@ -29,8 +29,8 @@ class DBStringExtras extends DataExtension
      */
     public function Nice()
     {
-        $value = preg_replace('/([a-z0-9])([A-Z])/', '$1 $2', $this->owner->value);
-        $value = preg_replace('/([a-zA-Z])-([a-zA-Z])/', '$1 $2', $value);
+        $value = preg_replace('/([a-z)([A-Z0-9]])/', '$1 $2', $this->owner->value);
+        $value = preg_replace('/([a-zA-Z])-([a-zA-Z0-9])/', '$1 $2', $value);
         $value = str_replace('_', ' ', $value);
         $value = trim($value);
         return $value;

@@ -50,9 +50,9 @@ Template
 ```
 Input = Output
 ```
-UllamcorperTellusSollicitudinBibendum-egestas
+UllamCorper1tspHTML_-_Bibendum-egestas-1-1
 =
-Ullamcorper Tellus Sollicitudin Bibendum egestas
+Ullam Corper 1tsp HTML - Bibendum egestas 1-1
 ```
 
 ### Hyphenate
