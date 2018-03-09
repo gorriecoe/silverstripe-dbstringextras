@@ -1,6 +1,6 @@
 {
   "name": "gorriecoe/silverstripe-dbstringextras",
-  "description": "Adds extra methods to strings.",
+  "description": "Adds extra methods to Silverstripe DBStrings to help manipulate them.",
   "type": "silverstripe-vendormodule",
   "license": "BSD-3-Clause",
   "authors": [

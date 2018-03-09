@@ -15,7 +15,7 @@ use SilverStripe\ORM\DataExtension;
 class DBStringExtras extends DataExtension
 {
     /**
-     * Replace all occurrences of the search string with the replacement string
+     * Replace all occurrences of the search string with the replacement string.
      * @return string
      */
     public function StrReplace($search = ' ', $replace = '')
@@ -37,7 +37,7 @@ class DBStringExtras extends DataExtension
     }
 
     /**
-     * Converts this camel case string to a hyphenated, kebab or spinal case string
+     * Converts this camel case string to a hyphenated, kebab or spinal case string.
      */
     public function Hyphenate()
     {
@@ -56,7 +56,7 @@ class DBStringExtras extends DataExtension
     }
 
     /**
-     * Converts square brackets [] within this string to a span with css class
+     * Converts square brackets [] within this string to a span with css class.
      * @param string Define custom class
      * @return string
      */

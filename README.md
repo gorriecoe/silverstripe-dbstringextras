@@ -1,5 +1,5 @@
 # Silverstripe DBString Extras
-Adds extra methods to strings to manipulate them.
+Adds extra methods to Silverstripe DBStrings to help manipulate them.
 
 ## Installation
 Composer is the recommended way of installing SilverStripe modules.
@@ -50,9 +50,9 @@ Template
 ```
 Input = Output
 ```
-UllamcorperTellusSollicitudinBibendumEgestas
+UllamcorperTellusSollicitudinBibendum-egestas
 =
-Ullamcorper Tellus Sollicitudin Bibendum Egestas
+Ullamcorper Tellus Sollicitudin Bibendum egestas
 ```
 
 ### Hyphenate
@@ -95,7 +95,7 @@ UllamcorperTellusSollicitudinBibendumEgestas
 
 ### Highlight
 
-Converts square brackets [] within this string to a span with css class
+Converts square brackets [] within this string to a spans with css class.
 
 PHP
 ```php
@@ -116,7 +116,7 @@ Ullamcorper <span class="highlight">Tellus</span> Sollicitudin Bibendum Egestas
 
 ### SplitLines
 
-Separates this string by lines into multiple an ArrayList.
+Separates this string by lines into an ArrayList.
 
 Template
 ```
