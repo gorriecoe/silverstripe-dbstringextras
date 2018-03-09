@@ -24,12 +24,14 @@ class DBStringExtras extends DataExtension
     }
 
     /**
-     * Converts this camel case string to a space separated string
+     * Converts this camel case and hyphenated string to a space separated string.
      * @return string
      */
     public function Nice()
     {
-        $value = preg_replace('/([A-Z])/', ' $1', $this->owner->value);
+        $value = preg_replace('/([a-z0-9])([A-Z])/', '$1 $2', $this->owner->value);
+        $value = preg_replace('/([a-zA-Z])-([a-zA-Z])/', '$1 $2', $value);
+        $value = str_replace('_', ' ', $value);
         $value = trim($value);
         return $value;
     }

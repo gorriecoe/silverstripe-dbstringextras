@@ -38,7 +38,7 @@ Ullamcorper Tellus Replacement value Egestas
 
 ### Nice
 
-Converts this camel case string to a space separated string.
+Converts this camel case and hyphenated string to a space separated string.
 
 PHP
 ```php
