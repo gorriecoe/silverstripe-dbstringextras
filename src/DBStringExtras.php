@@ -56,7 +56,7 @@ class DBStringExtras extends DataExtension
     }
 
     /**
-     * Converts square brackets [] within this string to a span with css class.
+     * Converts square brackets [] within this string to a spans with css class.
      * @param string Define custom class
      * @return string
      */
@@ -66,7 +66,7 @@ class DBStringExtras extends DataExtension
     }
 
     /**
-     * Separates this string by lines into multiple an ArrayList.
+     * Separates this string by lines into an ArrayList.
      * Example template usage
      * ```
      * <% loop Content.SplitLines %>
