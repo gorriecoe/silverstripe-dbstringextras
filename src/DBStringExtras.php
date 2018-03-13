@@ -15,6 +15,15 @@ use SilverStripe\ORM\DataExtension;
 class DBStringExtras extends DataExtension
 {
     /**
+     * Ensures that the methods are wrapped in the correct type and
+     * values are safely escaped while rendering in the template.
+     * @var array
+     */
+    private static $casting = [
+        'Highlight' => 'HTMLFragment'
+    ];
+
+    /**
      * Replace all occurrences of the search string with the replacement string.
      * @return string
      */
