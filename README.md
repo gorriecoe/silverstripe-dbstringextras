@@ -138,3 +138,25 @@ Etiam porta sem malesuada magna mollis euismod.
     Etiam porta sem malesuada magna mollis euismod.
 </div>
 ```
+
+### Explode
+
+Separates this string by specified the delimiter.
+
+Template
+```
+<% loop String.Explode(',') %>
+    <li>
+        {$Value}
+    </li>
+<% end_loop %>
+```
+Input = Output
+```html
+Aenean,Purus,Dolor,Magna
+=
+<li>Aenean</li>
+<li>Purus</li>
+<li>Dolor</li>
+<li>Magna</li>
+```

@@ -94,13 +94,35 @@ class DBStringExtras extends DataExtension
         $lines = ArrayList::create();
         foreach (preg_split("/\n|<br\/?>/", $value) as $line) {
             $lines->push(
-                ArrayData::create(
-                    array(
-                        'Line' => $line
-                    )
-                )
+                ArrayData::create(['Line' => $line])
             );
         }
         return $lines;
+    }
+
+    /**
+     * Separates this string by the specified delimiter.
+     * Example template usage
+     * ```
+     * <% loop Content.Explode(',') %>
+     *     <li>
+     *         {$Value}
+     *     </li>
+     * <% end_loop %>
+     * ```
+     * @return ArrayList|Null
+     */
+    public function Explode($delimiter)
+    {
+        if (!$delimiter || !$string = $this->owner->value) {
+            return;
+        }
+        $values = ArrayList::create();
+        foreach (explode($delimiter, $string) as $value) {
+            $values->push(
+                ArrayData::create(['Value' => $value])
+            );
+        }
+        return $values;
     }
 }
