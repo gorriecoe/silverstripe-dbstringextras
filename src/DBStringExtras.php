@@ -71,7 +71,7 @@ class DBStringExtras extends DataExtension
      */
     public function Highlight($class = 'highlight')
     {
-        return preg_replace('/\[([\w\d\s]*)\]/', '<span class="' . $class . '">$1</span>', $this->owner->value);
+        return preg_replace('/\[([^\]]*)\]/', '<span class="' . $class . '">$1</span>', $this->owner->value);
     }
 
     /**
