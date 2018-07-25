@@ -6,6 +6,7 @@ use SilverStripe\Core\Convert;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\View\ArrayData;
 use SilverStripe\ORM\DataExtension;
+use SilverStripe\ORM\FieldType\DBHTMLText;
 
 /**
  * Adds extra methods to strings
@@ -67,11 +68,16 @@ class DBStringExtras extends DataExtension
     /**
      * Converts square brackets [] within this string to a spans with css class.
      * @param string Define custom class
-     * @return string
+     * @return DBHTMLText
      */
     public function Highlight($class = 'highlight')
     {
-        return preg_replace('/\[([^\]]*)\]/', '<span class="' . $class . '">$1</span>', $this->owner->value);
+        $owner = $this->owner;
+        $new = DBHTMLText::create();
+        $new->name = $owner->name;
+        $owner->value = $owner->forTemplate();
+        $new->value = preg_replace('/\[([^\]]*)\]/', '<span class="' . $class . '">$1</span>', $owner->value);
+        return $new;
     }
 
     /**
