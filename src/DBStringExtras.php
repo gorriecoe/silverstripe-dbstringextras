@@ -30,7 +30,13 @@ class DBStringExtras extends DataExtension
      */
     public function StrReplace($search = ' ', $replace = '')
     {
-        return str_replace($search,$replace, $this->owner->value);
+        $owner = $this->owner;
+        $owner->value = str_replace(
+            $search,
+            $replace,
+            $owner->value
+        );
+        return $owner;
     }
 
     /**
@@ -39,11 +45,12 @@ class DBStringExtras extends DataExtension
      */
     public function Nice()
     {
-        $value = preg_replace('/([a-z)([A-Z0-9]])/', '$1 $2', $this->owner->value);
+        $owner = $this->owner;
+        $value = preg_replace('/([a-z)([A-Z0-9]])/', '$1 $2', $owner->value);
         $value = preg_replace('/([a-zA-Z])-([a-zA-Z0-9])/', '$1 $2', $value);
         $value = str_replace('_', ' ', $value);
-        $value = trim($value);
-        return $value;
+        $owner->value = trim($value);
+        return $owner;
     }
 
     /**
@@ -62,7 +69,13 @@ class DBStringExtras extends DataExtension
      */
     public function RemoveSpaces()
     {
-        return str_replace(array(' ','&nbsp'), '', $this->owner->value);
+        $owner = $this->owner;
+        $owner->value = str_replace(
+            [' ', '&nbsp'],
+            '',
+            $owner->value
+        );
+        return $owner;
     }
 
     /**
