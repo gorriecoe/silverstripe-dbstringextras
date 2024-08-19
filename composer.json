@@ -16,7 +16,7 @@
   ],
   "homepage": "http://github.com/gorriecoe/silverstripe-dbstringextras",
   "require": {
-    "silverstripe/framework": "^4.0"
+    "silverstripe/framework": "^4 || ^5"
   },
   "extra": {
     "installer-name": "dbstringextras"
